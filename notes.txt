@@ -1,0 +1,20 @@
+1) If the shuf.py script is invoked with Python 2 it could still run successfully and produce the valid
+   output. This is due to the fact that the program only uses features like argparse, random, sys 
+   and other basic things that are not exclusive to Python 3 and are still supported on Python 2.
+2) Benchmark Testing Report
+   Run 1: user = 0.04, sys = 0.00, total = 0.04
+   Run 2: user = 0.04, sys = 0.00, total = 0.04
+   Run 3: user = 0.04, sys = 0.00, total = 0.04
+   Run 4: user = 0.04, sys = 0.00, total = 0.04
+   Run 5: user = 0.03, sys = 0.01, total = 0.04
+
+   Median total time: 0.04 seconds
+
+   The machine architecture was x86_64, 8 CPUS online and little-endian byte order. The processor
+   is an Intel(R) Xeon(R) Silver 4116 CPU @ 2.10GHz. OS was Red Hat Enterprise Linux 9.6 (Plow)
+
+   I also checked the python versions available on /usr/bin/python corresponded to Python 2.7.18 
+   while /usr/local/cs/bin/python corresponded to Python 3.14.2
+   
+   When benchmarking I used:
+   /usr/bin/time -p python3 shuf.py -i 1-10000 -n 1000 > /dev/null
