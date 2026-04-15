@@ -18,3 +18,11 @@
    
    When benchmarking I used:
    /usr/bin/time -p python3 shuf.py -i 1-10000 -n 1000 > /dev/null
+
+
+
+Appendix 
+
+An LLM was utilized in the help of writing the report. The slide with the requirements of the notes.txt
+file was sent in order to find out what exactly was wanted and then the information printed out by 
+the windows powershell was sent to it to help interpret the information.
